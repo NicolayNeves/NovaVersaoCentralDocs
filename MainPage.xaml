@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovaVersaoCentralDocs.MainPage" 
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto,*" Padding="10">
+
+        <!-- Top Navigation (mantive como estava) -->
+        <Grid BackgroundColor="#3082D9"
+              Padding="15"
+              Row="0"
+              ColumnDefinitions="Auto,*,Auto,Auto">
+
+            <Image Source="centraldocs.png"
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   VerticalOptions="Center"/>
+
+            <SearchBar Placeholder="Pesquisar por documento"
+                       Grid.Column="1"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       HeightRequest="40"
+                       VerticalOptions="Center"/>
+
+            <Image Grid.Column="2"
+                   HeightRequest="25"
+                   VerticalOptions="Center"/>
+
+            <Image Grid.Column="3"
+                   Source="file:///C:/Users/nicolay.gneves/Downloads/sino.png"
+                   HeightRequest="25"
+                   VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- Menu de Documentos -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="20"
+                Padding="30">
+
+                <!-- Exemplo de "botão" com Frame -->
+                <Frame BackgroundColor="#1976D2"
+                       CornerRadius="8"
+                       HasShadow="False"
+                       HeightRequest="80"
+                       WidthRequest="800"
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" VerticalOptions="FillAndExpand">
+                        <Image Grid.Column="0"
+                               Source="do-utilizador.png"
+                               HeightRequest="25"
+                               VerticalOptions="Center"
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1"
+                               Text="CARTEIRA DE IDENTIDADE NACIONAL"
+                               TextColor="White"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        <!-- Use Command para MVVM ou Tapped para code-behind -->
+                        <TapGestureRecognizer 
+                            Tapped="OnCniTapped"
+                            NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- Carteira de Trabalho -->
+                <Frame BackgroundColor="#1976D2"
+                       CornerRadius="8" 
+                       HasShadow="False" 
+                       HeightRequest="80" 
+                       WidthRequest="800" Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" 
+                               Source="cracha.png" 
+                               HeightRequest="25" 
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="CARTEIRA DE TRABALHO" 
+                               TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                       
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- E-TÍTULO -->
+                <Frame BackgroundColor="#1976D2" 
+                       CornerRadius="8" 
+                       HasShadow="False" 
+                       HeightRequest="80" 
+                       WidthRequest="800" 
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" 
+                               Source="homem-empregado.png" 
+                               HeightRequest="25" 
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="E-TÍTULO" 
+                               TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                    
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- CNH -->
+                <Frame BackgroundColor="#1976D2" 
+                       CornerRadius="8" 
+                       HasShadow="False" 
+                       HeightRequest="80" 
+                       WidthRequest="800" 
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" 
+                               Source="garagem.png" 
+                               HeightRequest="25" 
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="CNH" 
+                               TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                       
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- CRLV -->
+                <Frame BackgroundColor="#1976D2" 
+                       CornerRadius="8" 
+                       HasShadow="False" 
+                       HeightRequest="80" 
+                       WidthRequest="800" 
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" Source="carro(1).png" 
+                               HeightRequest="25" VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="CRLV" 
+                               TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                        
+                    </Grid>
+                    <Frame.GestureRecognizers>
+              
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- Reservista -->
+                <Frame BackgroundColor="#1976D2"
+                       CornerRadius="8"
+                       HasShadow="False" 
+                       HeightRequest="80"
+                       WidthRequest="800"
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" 
+                               Source="xerife-distintivo.png" 
+                               HeightRequest="25" 
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="RESERVISTA" 
+                               TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                      
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- Certidão de Nascimento -->
+                <Frame BackgroundColor="#1976D2" 
+                       CornerRadius="8" 
+                       HasShadow="False" 
+                       HeightRequest="80" 
+                       WidthRequest="800" 
+                       Padding="0">
+                    
+                    <Grid ColumnDefinitions="auto,*,auto" 
+                          VerticalOptions="FillAndExpand">
+                        
+                        <Image Grid.Column="0" 
+                               Source="bebe.png" 
+                               HeightRequest="25" 
+                               VerticalOptions="Center" 
+                               Margin="20,0,0,0"/>
+                        
+                        <Label Grid.Column="1" 
+                               Text="CERTIDÃO DE NASCIMENTO" TextColor="White" 
+                               FontSize="18" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Frame.GestureRecognizers>
+                        
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>
